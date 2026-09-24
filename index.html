@@ -96,7 +96,7 @@
     <li><strong>Encrypted before it leaves.</strong> Each Dropbox backup is encrypted on your device with a key derived from a passphrase only you know. We could not read it even if we had it, and we never do.</li>
     <li><strong>Narrowest access available.</strong> DotGrid uses Dropbox's App folder access, a single sandboxed folder for DotGrid — never the rest of your Dropbox.</li>
     <li><strong>Direct connection.</strong> Your device talks to Dropbox directly over an encrypted connection. Nothing passes through any server of ours.</li>
-    <li><strong>Your password stays with Dropbox.</strong> You sign in on Dropbox's own screen. The app receives an access token, stored securely on your device, and never sees your password. Disconnecting Dropbox in the app deletes that token from your device immediately; you can also revoke access from your Dropbox account settings.</li>
+    <li><strong>Your password stays with Dropbox.</strong> You sign in on Dropbox's own screen and never share your password with DotGrid. The app receives and stores a refresh token — encrypted with a key that is generated on your device and never leaves it — and uses that token to request short-lived access to your Dropbox as needed. Disconnecting Dropbox in the app deletes that token from your device immediately; you can also revoke access from your Dropbox account settings.</li>
     <li><strong>Backup, not sync.</strong> Restoring from a backup only happens when you start it, and replaces your journal only after you confirm.</li>
   </ul>
   <p>Backup files stored in your Dropbox account are also subject to <a href="https://www.dropbox.com/privacy" rel="noopener">Dropbox's Privacy Policy</a>.</p>
@@ -137,6 +137,7 @@
 
   <h2>Keeping and deleting your data</h2>
   <p>Your journal stays on your device until you delete it. Uninstalling the app or clearing its data in Android settings removes it from the device. A local-folder backup remains in the folder you chose, and a Dropbox backup remains in your Dropbox, until you delete it yourself. Because we hold none of your data, there is nothing for us to delete on our side.</p>
+  <p>Deleting an entry inside the app removes it from your live journal immediately, but a copy of it can remain inside backups already made until those backups age out. DotGrid keeps the 14 most recent backups per destination and removes older ones automatically as new ones are made — so a deleted entry does not disappear from every backup the moment you delete it, only once the backups holding it have rotated out.</p>
 
   <h2>Children</h2>
   <p>DotGrid is not directed at children and does not knowingly collect personal data from anyone, since it does not collect personal data from any user.</p>
