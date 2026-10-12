@@ -72,10 +72,10 @@
 <body>
 <main>
   <h1>DotGrid Privacy Policy</h1>
-  <p class="meta">Last updated 4 October 2026</p>
+  <p class="meta">Last updated 12 October 2026</p>
 
   <div class="summary">
-    <p><strong>In short:</strong> DotGrid is a local-first bullet journal. Everything you write stays on your device by default. There are no accounts, no servers, no ads and no analytics. You can optionally back up your journal to a folder you choose or to your own Dropbox — the Dropbox backup is encrypted with your own passphrase before it leaves your device. We never receive or see your journal.</p>
+    <p><strong>In short:</strong> DotGrid is a local-first bullet journal. Everything you write stays on your device by default. There are no accounts, no servers, no ads and no analytics. You can optionally back up your journal to a folder you choose, or to your own Dropbox or Google Drive account. Backups to Dropbox and Google Drive are plain copies stored in your own account — DotGrid does not encrypt them, so they are as private as that account. We never receive or see your journal.</p>
   </div>
 
   <p>This policy explains how the DotGrid app for Android ("the app") handles information.</p>
@@ -84,30 +84,30 @@
   <p>Everything you enter — tasks, notes, events, collections, tags, links between entries, any URLs you attach, and your preferences — is stored in a private database on your device that only DotGrid can read. It is not sent anywhere by default.</p>
   <p>We do not operate a server that stores, sees, or has access to your journal. If you uninstall the app or clear its data, your journal is removed from the device unless you have backed it up or exported it.</p>
 
-  <h2>Backup: local folder and Dropbox (both optional)</h2>
-  <p>DotGrid offers two backup destinations you can turn on in the app's backup settings. Neither is required to use the app, and both are things you start — DotGrid never backs up or restores without your action.</p>
+  <h2>Backup: local folder, Dropbox and Google Drive (all optional)</h2>
+  <p>DotGrid offers three backup destinations you can turn on in the app's backup settings. None is required to use the app. You choose to connect each one; once connected, DotGrid backs up to it automatically every night and whenever you tap Back up now. Restoring only ever happens when you start it.</p>
 
   <h3 style="font-family:inherit;font-weight:600;font-size:1.05rem;margin:0 0 .5rem;">Local folder</h3>
   <p>You can choose a folder on your device (or on removable storage) using Android's own folder picker, and DotGrid will save backup files there — daily and on demand — keeping the most recent copies and removing older ones. This file never leaves your device through the app; it stays in the folder you chose, in plain (unencrypted) JSON, so you can always open or move it yourself.</p>
 
-  <h3 style="font-family:inherit;font-weight:600;font-size:1.05rem;margin:0 0 .5rem;">Dropbox</h3>
-  <p>If you connect Dropbox, DotGrid can back up your journal to <strong>your own</strong> Dropbox account — daily and whenever you ask.</p>
+  <h3 style="font-family:inherit;font-weight:600;font-size:1.05rem;margin:0 0 .5rem;">Dropbox and Google Drive</h3>
+  <p>If you connect Dropbox or Google Drive, DotGrid can back up your journal to <strong>your own</strong> account there.</p>
   <ul>
-    <li><strong>Encrypted before it leaves.</strong> Each Dropbox backup is encrypted on your device with a key derived from a passphrase only you know. We could not read it even if we had it, and we never do.</li>
-    <li><strong>Automatic nightly backup.</strong> After you use your passphrase once, DotGrid also stores a key derived from it — not the passphrase itself — in your device's secure hardware-backed storage, so it can keep backing up to Dropbox automatically overnight without asking you to retype it each time. This derived key never leaves your device and is deleted immediately if you disconnect Dropbox.</li>
-    <li><strong>Narrowest access available.</strong> DotGrid uses Dropbox's App folder access, a single sandboxed folder for DotGrid — never the rest of your Dropbox.</li>
-    <li><strong>Direct connection.</strong> Your device talks to Dropbox directly over an encrypted connection. Nothing passes through any server of ours.</li>
-    <li><strong>Your password stays with Dropbox.</strong> You sign in on Dropbox's own screen and never share your password with DotGrid. The app receives and stores a refresh token — encrypted with a key that is generated on your device and never leaves it — and uses that token to request short-lived access to your Dropbox as needed. Disconnecting Dropbox in the app deletes that token from your device immediately; you can also revoke access from your Dropbox account settings.</li>
-    <li><strong>Backup, not sync.</strong> Restoring from a backup only happens when you start it, and replaces your journal only after you confirm.</li>
+    <li><strong>Plain copies, in your own account.</strong> Backups sent to Dropbox or Google Drive are plain JSON files, the same as the local folder's. DotGrid does not encrypt them, so anyone with access to that cloud account — or to the provider — could read them. Keep that account secure. We never hold a copy and cannot read it.</li>
+    <li><strong>Older Dropbox backups.</strong> Backups made to Dropbox by earlier versions of DotGrid (before version 1.3.0) were encrypted with a passphrase you chose. They stay encrypted, and still need that passphrase to restore. DotGrid no longer asks for a passphrase or stores anything derived from one.</li>
+    <li><strong>Narrowest access available.</strong> DotGrid uses Dropbox's App folder access, a single sandboxed folder for DotGrid. For Google Drive it uses only the hidden "app data" folder, which is a place only DotGrid can read and write: it cannot see or change any other file in your Drive, and you will not see these backups in Drive's own file list.</li>
+    <li><strong>Direct connection.</strong> Your device talks to Dropbox or Google directly over an encrypted connection. Nothing passes through any server of ours.</li>
+    <li><strong>Your password stays with them.</strong> You sign in on Dropbox's or Google's own page and never share your password with DotGrid. The app receives and stores a refresh token — encrypted with a key that is generated on your device and never leaves it — and uses that token to request short-lived access as needed. Disconnecting in the app deletes that token from your device immediately; you can also revoke access from your Dropbox account settings or your Google Account's third-party access page.</li>
+    <li><strong>Backup, not sync.</strong> Restoring from a backup only happens when you start it, and replaces your journal only after you confirm. A safety copy of what is on your phone is saved first.</li>
   </ul>
-  <p>Backup files stored in your Dropbox account are also subject to <a href="https://www.dropbox.com/privacy" rel="noopener">Dropbox's Privacy Policy</a>.</p>
-  <p>DotGrid does not currently offer Google Drive backup. If that changes in a future version, this policy will be updated before the feature ships.</p>
+  <p>Backup files stored in your Dropbox account are also subject to <a href="https://www.dropbox.com/privacy" rel="noopener">Dropbox's Privacy Policy</a>, and those in Google Drive to <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>.</p>
+  <p>DotGrid's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. DotGrid uses that access only to store and read its own backup files for you, and does not share it with anyone.</p>
 
   <h2>Calendar</h2>
   <p>If you grant calendar permission, DotGrid reads events from your device's calendars so it can show them alongside your journal, and creates <strong>one calendar of its own</strong> on your device for events you create in the app, including all-day ones for events without a time. If you edit or delete one of DotGrid's own events in a calendar app, that change is brought back into your journal. It never edits or deletes events in any calendar it does not own. Calendar data is not sent anywhere by the app.</p>
 
   <h2>Reminders and notifications</h2>
-  <p>If you allow notifications, DotGrid uses them to show reminders you set. Reminders are scheduled and delivered on your device.</p>
+  <p>If you allow notifications, DotGrid uses them to show reminders you set. Reminders are scheduled and delivered on your device. A reminder shows the title of the entry it is about, including on your lock screen unless you switch on "Hide titles on the lock screen" in the app's Reminders settings; your phone's own notification settings can also hide it.</p>
 
   <h2>Biometric lock (optional)</h2>
   <p>If you turn on the app lock, unlocking is handled by your device's own fingerprint, face, or PIN system. The app never sees or stores biometric data — it only receives a yes-or-no result from Android.</p>
@@ -115,13 +115,14 @@
   <h2>Export, import and sharing</h2>
   <p>You can export your journal as JSON or Markdown and import it from JSON. The app reads or writes only the files and locations you pick. Exported files are unencrypted and fully under your control once saved.</p>
   <p>When you share text or a link into DotGrid from another app, only what you share is saved, and it stays on your device like any other entry.</p>
+  <p>The "Share Dotgrid" row in Settings opens Android's own share sheet with a short message and a link to the app's Play Store page, so you can recommend it to someone. DotGrid sends nothing itself and does not track whether anyone installs the app.</p>
 
   <h2>Home screen widget</h2>
   <p>The widget shows your journal content on your home screen. It reads from the same on-device database and sends nothing anywhere. Anyone who can see your home screen can see what the widget displays.</p>
 
   <h2>What we don't do</h2>
   <ul class="no">
-    <li>No account or sign-in with us — the app does not know who you are.</li>
+    <li>No account or sign-in with us — the app does not know who you are. (If you connect Google Drive, you sign in with Google, on Google's own page, only to let the app save backups to your Drive.)</li>
     <li>No analytics, advertising, tracking, or crash-reporting services.</li>
     <li>No selling, renting, or sharing of your information with anyone.</li>
     <li>No collection of your location, contacts, or device identifiers.</li>
@@ -130,7 +131,7 @@
 
   <h2>Permissions</h2>
   <ul>
-    <li><strong>Internet</strong> — used only to reach Dropbox when you have connected it for backup.</li>
+    <li><strong>Internet</strong> — used only to reach Dropbox or Google Drive when you have connected one for backup.</li>
     <li><strong>Calendar</strong> — to read device events and manage DotGrid's own calendar, as described above.</li>
     <li><strong>Notifications</strong> — to show reminders you set.</li>
     <li><strong>Exact alarms</strong> — so a reminder set for a specific time arrives on time, if you allow it in system settings; reminders still work without it, just less precisely.</li>
@@ -139,7 +140,7 @@
   </ul>
 
   <h2>Keeping and deleting your data</h2>
-  <p>Your journal stays on your device until you delete it. Uninstalling the app or clearing its data in Android settings removes it from the device. A local-folder backup remains in the folder you chose, and a Dropbox backup remains in your Dropbox, until you delete it yourself. Because we hold none of your data, there is nothing for us to delete on our side.</p>
+  <p>Your journal stays on your device until you delete it. Uninstalling the app or clearing its data in Android settings removes it from the device. A local-folder backup remains in the folder you chose, a Dropbox backup remains in your Dropbox, and a Google Drive backup remains in DotGrid's hidden app-data folder in your Drive (you can remove it in Google Drive's settings under Manage apps, then DotGrid, then Delete hidden app data), until you delete it yourself. Because we hold none of your data, there is nothing for us to delete on our side.</p>
   <p>Deleting an entry inside the app removes it from your live journal immediately, but a copy of it can remain inside backups already made until those backups age out. DotGrid keeps the 14 most recent backups per destination and removes older ones automatically as new ones are made — so a deleted entry does not disappear from every backup the moment you delete it, only once the backups holding it have rotated out.</p>
 
   <h2>Children</h2>
